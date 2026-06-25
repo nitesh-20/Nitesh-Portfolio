@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Agrisahayak">
+  <rect width="64" height="64" rx="16" fill="#101010"/>
+  <!-- Soil base -->
+  <path d="M18 48h28" stroke="#f7f7f2" stroke-width="3" stroke-linecap="round"/>
+  <!-- Sprout Stem -->
+  <path d="M32 48c0-12-4-22 0-30" fill="none" stroke="#2ecc71" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <path d="M31 34c-8 0-10-8 0-8M32 26c8 0 10-8 0-8" fill="none" stroke="#2ecc71" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

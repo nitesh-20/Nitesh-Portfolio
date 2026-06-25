@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LawGPT">
+  <rect width="64" height="64" rx="16" fill="#101010"/>
+  <!-- Scales of Justice -->
+  <path fill="none" stroke="#f7f7f2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M32 14v34M22 48h20M16 22h32"/>
+  <!-- Hanging pans -->
+  <path fill="none" stroke="#e0a96d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M20 22l-4 14h8zm24 0l-4 14h8z"/>
+</svg>

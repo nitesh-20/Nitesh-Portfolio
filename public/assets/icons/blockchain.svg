@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Blockchain">
+  <rect width="64" height="64" rx="16" fill="#101010"/>
+  <!-- Blockchain network connections -->
+  <path d="M20 22h24L32 44Z" fill="none" stroke="#a855f7" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Nodes -->
+  <circle cx="20" cy="22" r="5" fill="#f7f7f2"/>
+  <circle cx="44" cy="22" r="5" fill="#f7f7f2"/>
+  <circle cx="32" cy="44" r="5" fill="#f7f7f2"/>
+  <!-- Additional node details -->
+  <circle cx="20" cy="22" r="2" fill="#a855f7"/>
+  <circle cx="44" cy="22" r="2" fill="#a855f7"/>
+  <circle cx="32" cy="44" r="2" fill="#a855f7"/>
+</svg>
