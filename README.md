@@ -1,5 +1,7 @@
 # Nitesh Portfolio
 
+🚀 **Live Site**: [https://nitesh-portfolio-88n1.vercel.app/](https://nitesh-portfolio-88n1.vercel.app/)
+
 Next.js App Router portfolio for Nitesh Sahu (Computer Science Undergraduate & GDG Lead) featuring:
 
 - Data-driven portfolio content
