@@ -1,11 +1,11 @@
-# Vivek Portfolio
+# Nitesh Portfolio
 
-Next.js App Router portfolio for Vivek Sahu with:
+Next.js App Router portfolio for Nitesh Sahu (Computer Science Undergraduate & GDG Lead) featuring:
 
-- data-driven portfolio content
-- a live GitHub activity route
-- a premium single-page React UI
-- client-side theme, command palette, and project interactions
+- Data-driven portfolio content
+- A live GitHub activity integration with public API fallback
+- A premium single-page React UI
+- Client-side theme toggling, interactive command palette, and smooth custom project interactions
 
 ## Development
 
@@ -22,5 +22,4 @@ npm run build
 
 ## Environment
 
-Set `GITHUB_TOKEN` if you want the GitHub contribution calendar to render. Public profile and repository data still work without it.
-# Nitesh-Portfolio
+Optionally set `GITHUB_TOKEN` to sync contributions using GitHub's GraphQL API. If no token is provided, the server automatically falls back to a public parser API.
