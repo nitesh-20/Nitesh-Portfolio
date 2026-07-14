@@ -16,7 +16,15 @@ export function ExperienceSection({ experience }: { experience: PortfolioContent
                 <h3>{item.title}</h3>
                 <p className="experience-meta">{item.company}</p>
                 <p className="experience-meta">{item.meta.join(" · ")}</p>
-                <p>{item.description}</p>
+                {Array.isArray(item.description) ? (
+                  <ul className="experience-bullets">
+                    {item.description.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{item.description}</p>
+                )}
                 {item.tags.length ? (
                   <div className="tags compact">
                     {item.tags.map((tag) => (

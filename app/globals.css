@@ -538,6 +538,30 @@ html:not([data-theme]) .social-mark img {
   line-height: 1.8;
 }
 
+.experience-bullets {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-bullets li {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+}
+
+.experience-bullets li::before {
+  content: "—";
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
 .tags,
 .stack-pills {
   display: flex;

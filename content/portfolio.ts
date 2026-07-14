@@ -3,7 +3,7 @@ export const portfolioContent = {
     initials: "NS",
     name: "Nitesh Sahu",
     eyebrow: "I build scalable web apps and AI solutions.",
-    role: "Computer Science Undergraduate & GDG Lead at SSIPMT Raipur",
+    role: "AI Builder & Strategist | 1+ Years of Experience",
     headline: "AI & Web Apps",
     summary:
       "Computer Science undergraduate and GDG Lead at SSIPMT Raipur passionate about building scalable web applications and AI-powered solutions.",
@@ -37,8 +37,25 @@ export const portfolioContent = {
       icon: "/assets/icons/linkedin.svg",
       tone: "linkedin",
     },
+    {
+      label: "X",
+      handle: "@Niteshsahu2001",
+      href: "https://x.com/Niteshsahu2001",
+      icon: "/assets/icons/x.svg",
+      tone: "x",
+    },
   ],
   experience: [
+    {
+      title: "AI Strategy & Builder",
+      company: "Trivana Capital",
+      meta: ["November 2025 – Present", "Remote"],
+      description:
+        "Driving AI strategy and building production-ready AI solutions that automate business processes and enhance decision-making. Focused on developing intelligent agents, LLM-powered applications, RAG systems, and scalable AI workflows by collaborating closely with product and engineering teams.",
+      icon: "/assets/icons/trivana.svg",
+      tone: "trivana",
+      tags: ["AI Strategy", "AI Agents", "LLMs", "RAG Systems", "AI Workflows"],
+    },
     {
       title: "GDG Lead",
       company: "SSIPMT Raipur",
@@ -48,6 +65,19 @@ export const portfolioContent = {
       icon: "/assets/icons/gdg.svg",
       tone: "gdg",
       tags: ["Leadership", "Community", "Web Dev", "Cloud", "AI"],
+    },
+    {
+      title: "Web Developer Intern",
+      company: "Internship Studio",
+      meta: ["May 28, 2024 – July 2, 2024", "Remote"],
+      description: [
+        "Designed and developed responsive web pages using HTML, CSS, and JavaScript.",
+        "Enhanced website functionality and user experience by integrating modern frontend technologies like React.js and Tailwind CSS.",
+        "Gained practical experience in building and optimizing web interfaces.",
+      ],
+      icon: "/assets/icons/briefcase.svg",
+      tone: "",
+      tags: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
     },
   ],
   about: [
@@ -194,6 +224,7 @@ export const portfolioContent = {
   copyActions: [
     { label: "Copy GitHub URL", value: "https://github.com/nitesh-20" },
     { label: "Copy LinkedIn URL", value: "https://www.linkedin.com/in/niteshsahu20/" },
+    { label: "Copy X URL", value: "https://x.com/Niteshsahu2001" },
   ],
 } as const;
 
