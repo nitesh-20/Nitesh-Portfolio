@@ -498,7 +498,6 @@ html:not([data-theme]) .social-mark img {
   border: 1px solid var(--border);
 }
 
-.experience-item,
 .achievement-list article {
   display: grid;
   gap: 18px;
@@ -508,10 +507,6 @@ html:not([data-theme]) .social-mark img {
   background: var(--surface-tint);
 }
 
-.experience-item {
-  grid-template-columns: 64px 1fr auto;
-}
-
 .achievement-list article {
   grid-template-columns: 60px 1fr 72px;
   align-items: center;
@@ -519,9 +514,150 @@ html:not([data-theme]) .social-mark img {
   padding: 20px 22px;
 }
 
-.experience-item:last-child,
 .achievement-list article:last-child {
   border-bottom: 0;
+}
+
+/* Experience Accordion */
+.experience-card {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  transition: background 200ms ease;
+}
+
+.experience-card:last-child {
+  border-bottom: none;
+}
+
+.experience-card.open {
+  background: var(--surface-tint);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.experience-card.open::before {
+  transform: scaleY(1);
+}
+
+.experience-trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 64px 280px 1fr 48px;
+  align-items: center;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  min-height: 80px;
+  transition: background 180ms ease;
+}
+
+.experience-trigger:hover {
+  background: color-mix(in oklch, var(--accent) 4%, transparent);
+}
+
+.experience-card.open .experience-trigger {
+  border-bottom-color: var(--border);
+}
+
+.experience-logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.experience-title-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  min-width: 0;
+}
+
+.experience-title-cell strong {
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.experience-title-cell em {
+  font-style: normal;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.experience-date-cell {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--quiet);
+}
+
+.experience-chevron-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  border-left: 1px solid var(--border);
+  color: var(--quiet);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.experience-chevron-cell::after {
+  content: "⌄";
+  display: block;
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.experience-card.open .experience-chevron-cell::after {
+  transform: rotate(180deg);
+}
+
+/* Collapsible body */
+.experience-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 340ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.experience-card.open .experience-body {
+  grid-template-rows: 1fr;
+}
+
+.experience-body-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.experience-content {
+  padding: 24px 24px 24px 80px;
 }
 
 .experience-copy,
@@ -536,7 +672,7 @@ html:not([data-theme]) .social-mark img {
   gap: 24px;
 }
 
-.experience-item p,
+.experience-card p,
 .achievement-copy p,
 .terminal-list li,
 .project-card > p,
@@ -992,7 +1128,7 @@ html:not([data-theme]) .social-mark img {
   animation-range: entry 0% entry 40%;
 }
 
-.experience-item {
+.experience-card {
   animation: reveal-up linear both;
   animation-timeline: view();
   animation-range: entry 0% entry 40%;
@@ -1001,7 +1137,7 @@ html:not([data-theme]) .social-mark img {
 @media (prefers-reduced-motion: reduce) {
   .section-heading,
   .achievement-list article,
-  .experience-item,
+  .experience-card,
   .project-card {
     animation: none !important;
   }
@@ -1389,9 +1525,21 @@ html:not([data-theme]) .social-mark img {
 
   .topbar .rail,
   .profile-grid,
-  .github-chart-layout,
-  .experience-item {
+  .github-chart-layout {
     grid-template-columns: 1fr;
+  }
+
+  .experience-trigger {
+    grid-template-columns: 52px 1fr 40px;
+    min-height: 70px;
+  }
+
+  .experience-date-cell {
+    display: none;
+  }
+
+  .experience-body-inner {
+    padding-left: 20px;
   }
 
   .achievement-list article {
