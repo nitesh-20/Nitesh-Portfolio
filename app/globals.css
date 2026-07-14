@@ -30,23 +30,24 @@
 }
 
 html[data-theme="light"] {
-  --bg: #f3f2ed;
-  --panel: rgba(255, 253, 248, 0.96);
-  --panel-soft: rgba(236, 233, 223, 0.95);
-  --panel-strong: rgba(255, 253, 248, 0.99);
-  --text: #111111;
-  --muted: rgba(17, 17, 17, 0.72);
-  --quiet: rgba(17, 17, 17, 0.46);
-  --border: rgba(17, 17, 17, 0.12);
-  --border-strong: rgba(17, 17, 17, 0.2);
-  --hover: rgba(17, 17, 17, 0.04);
-  --grid-line: rgba(17, 17, 17, 0.085);
-  --scan-line: rgba(17, 17, 17, 0.04);
-  --stripe-line: rgba(17, 17, 17, 0.055);
-  --surface-tint: rgba(17, 17, 17, 0.018);
-  --surface-tint-strong: rgba(17, 17, 17, 0.035);
-  --icon-surface: rgba(255, 255, 255, 0.56);
-  --icon-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.02);
+  color-scheme: light;
+  --bg: #fafafa;
+  --panel: #ffffff;
+  --panel-soft: #f4f4f5;
+  --panel-strong: #ffffff;
+  --text: #09090b;
+  --muted: #52525b;
+  --quiet: #a1a1aa;
+  --border: rgba(9, 9, 11, 0.08);
+  --border-strong: rgba(9, 9, 11, 0.15);
+  --hover: rgba(9, 9, 11, 0.04);
+  --grid-line: rgba(9, 9, 11, 0.03);
+  --scan-line: rgba(9, 9, 11, 0.01);
+  --stripe-line: rgba(9, 9, 11, 0.02);
+  --surface-tint: rgba(9, 9, 11, 0.01);
+  --surface-tint-strong: rgba(9, 9, 11, 0.02);
+  --icon-surface: #ffffff;
+  --icon-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(9, 9, 11, 0.05);
 }
 
 * {
@@ -178,12 +179,19 @@ section[id] {
 
 .icon-button img,
 .social-mark img,
-.company-logo img,
-.achievement-logo img,
 .timeline-icons img,
 .github-badge img {
   width: 1em;
   height: 1em;
+  filter: none;
+}
+
+.company-logo img,
+.achievement-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
   filter: none;
 }
 

@@ -52,7 +52,7 @@ export const portfolioContent = {
       meta: ["November 2025 – Present", "Remote"],
       description:
         "Driving AI strategy and building production-ready AI solutions that automate business processes and enhance decision-making. Focused on developing intelligent agents, LLM-powered applications, RAG systems, and scalable AI workflows by collaborating closely with product and engineering teams.",
-      icon: "/assets/icons/trivana.svg",
+      icon: "/assets/icons/trivana.svg?v=2",
       tone: "trivana",
       tags: ["AI Strategy", "AI Agents", "LLMs", "RAG Systems", "AI Workflows"],
     },
@@ -62,7 +62,7 @@ export const portfolioContent = {
       meta: ["2025 - Present", "Raipur, Chhattisgarh, India"],
       description:
         "Leading the Google Developer Groups (GDG) student community at SSIPMT Raipur. Organizing technical workshops, hackathons, coding competitions, and developer events. Mentoring students in Web Development, Cloud Computing, AI, and Open Source. Collaborating with industry professionals to drive technical initiatives.",
-      icon: "/assets/icons/gdg.svg",
+      icon: "/assets/icons/gdg.svg?v=2",
       tone: "gdg",
       tags: ["Leadership", "Community", "Web Dev", "Cloud", "AI"],
     },
@@ -75,7 +75,7 @@ export const portfolioContent = {
         "Enhanced website functionality and user experience by integrating modern frontend technologies like React.js and Tailwind CSS.",
         "Gained practical experience in building and optimizing web interfaces.",
       ],
-      icon: "/assets/icons/briefcase.svg",
+      icon: "/assets/icons/briefcase.svg?v=2",
       tone: "",
       tags: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
     },
