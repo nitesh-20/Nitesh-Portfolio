@@ -6,6 +6,7 @@ type ProjectAccordionProps = {
   project: {
     name: string;
     href: string;
+    liveLink?: string;
     kind: string;
     summary: string;
     description: string;
@@ -62,15 +63,28 @@ export function ProjectAccordion({ project, index: _index }: ProjectAccordionPro
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`${project.name} on GitHub`}
-          className="project-gh"
-        >
-          GitHub ↗
-        </a>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          {project.liveLink && (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${project.name} Live Demo`}
+              className="project-gh"
+            >
+              Live Demo ↗
+            </a>
+          )}
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.name} on GitHub`}
+            className="project-gh"
+          >
+            GitHub ↗
+          </a>
+        </div>
       </footer>
     </article>
   );

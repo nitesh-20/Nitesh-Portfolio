@@ -4,7 +4,7 @@ export const portfolioContent = {
     name: "Nitesh Sahu",
     eyebrow: "I build scalable web apps and AI solutions.",
     role: "AI Builder & Strategist | 1+ Years of Experience",
-    headline: "AI & Web Apps",
+    headline: "Building AI-Powered Web Applications",
     summary:
       "Computer Science undergraduate and GDG Lead at SSIPMT Raipur passionate about building scalable web applications and AI-powered solutions.",
     supportUrl: "mailto:iamniteshsahu20@gmail.com",
@@ -46,16 +46,7 @@ export const portfolioContent = {
     },
   ],
   experience: [
-    {
-      title: "AI Strategy & Builder",
-      company: "Trivana Capital",
-      meta: ["November 2025 – Present", "Remote"],
-      description:
-        "Driving AI strategy and building production-ready AI solutions that automate business processes and enhance decision-making. Focused on developing intelligent agents, LLM-powered applications, RAG systems, and scalable AI workflows by collaborating closely with product and engineering teams.",
-      icon: "/assets/icons/trivana.svg?v=2",
-      tone: "trivana",
-      tags: ["AI Strategy", "AI Agents", "LLMs", "RAG Systems", "AI Workflows"],
-    },
+
     {
       title: "GDG Lead",
       company: "SSIPMT Raipur",
@@ -159,7 +150,8 @@ export const portfolioContent = {
   projects: [
     {
       name: "LawGPT",
-      href: "https://github.com/nitesh-20/LawGPT",
+      href: "https://github.com/nitesh-20/LawGptGoogle",
+      liveLink: "https://law-gpt-1c925.firebaseapp.com/",
       kind: "AI Legal Assistant · React.js + Node.js + Express.js + MySQL",
       summary: "Developed an AI-powered legal document analysis and question-answering platform.",
       description:
@@ -177,7 +169,8 @@ export const portfolioContent = {
     },
     {
       name: "Vaani.AI",
-      href: "https://github.com/nitesh-20/Vaani.AI",
+      href: "https://github.com/nitesh-20/Vaani-Ai-for-Paytm",
+      liveLink: "https://vaani-ai-paytm.vercel.app/",
       kind: "Voice AI for Merchant Intelligence · React.js + Node.js + Gemini",
       summary: "Voice-first AI assistant helping merchants understand settlements, deductions, and transaction insights.",
       description:
@@ -195,7 +188,8 @@ export const portfolioContent = {
     },
     {
       name: "Agrisahayak",
-      href: "https://github.com/nitesh-20/Agrisahayak",
+      href: "https://github.com/nitesh-20/Google-AgenticAi-Hackthon",
+      liveLink: "https://google-agentic-ai-hackthon.vercel.app/",
       kind: "AI Agriculture Assistant · React.js + GCP + Firebase",
       summary: "AI-powered platform providing crop guidance, weather alerts, and market intelligence.",
       description:
@@ -213,7 +207,8 @@ export const portfolioContent = {
     },
     {
       name: "RIO",
-      href: "https://github.com/nitesh-20/RIO",
+      href: "https://github.com/nitesh-20/Regulatory-Intelligence-OS-RIO-",
+      liveLink: "https://rio-agent-platform.vercel.app/",
       kind: "AI Regulatory Assistant · React.js + TypeScript + FastAPI + GCP",
       summary: "AI-powered platform that simplifies regulatory research by helping users search, analyze, and understand complex regulatory documents.",
       description:
