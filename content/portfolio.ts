@@ -80,19 +80,27 @@ export const portfolioContent = {
   stackGroups: [
     {
       title: "Languages",
-      items: ["JavaScript", "C++", "SQL"],
+      items: ["Python", "JavaScript", "TypeScript", "C++", "SQL"],
     },
     {
       title: "Frontend",
-      items: ["React.js", "TypeScript", "HTML5", "CSS3"],
+      items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Vite"],
     },
     {
-      title: "Backend & Databases",
-      items: ["Node.js", "Express.js", "REST APIs", "MVC Architecture", "MySQL", "Firebase Firestore"],
+      title: "Backend",
+      items: ["FastAPI", "Node.js", "Express.js", "REST APIs", "WebSockets"],
     },
     {
-      title: "Cloud & AI Tools",
-      items: ["Google Cloud Platform (GCP)", "Firebase", "RAG", "LLMs", "Gemini", "Git", "GitHub", "Postman", "VS Code"],
+      title: "Databases",
+      items: ["PostgreSQL", "Firebase Firestore", "MySQL", "Qdrant", "Redis"],
+    },
+    {
+      title: "AI & LLM",
+      items: ["Google Gemini", "LangGraph", "AI Agents", "RAG", "Prompt Engineering", "Semantic Search", "MCP"],
+    },
+    {
+      title: "Cloud & DevOps",
+      items: ["Google Cloud", "Firebase", "Docker", "Git", "GitHub", "Postman"],
     },
   ],
   achievements: [
