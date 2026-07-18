@@ -3,8 +3,8 @@ export const portfolioContent = {
     initials: "NS",
     name: "Nitesh Sahu",
     eyebrow: "I build scalable web apps and AI solutions.",
-    role: "AI Builder & Strategist | 1+ Years of Experience",
-    headline: "Building AI-Powered Web Applications",
+    role: "Building AI-Powered Web Applications",
+    headline: "AI & Web Apps",
     summary:
       "Computer Science undergraduate and GDG Lead at SSIPMT Raipur passionate about building scalable web applications and AI-powered solutions.",
     supportUrl: "mailto:iamniteshsahu20@gmail.com",
