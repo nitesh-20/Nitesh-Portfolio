@@ -80,7 +80,7 @@ export const portfolioContent = {
   stackGroups: [
     {
       title: "Languages",
-      items: ["Python", "JavaScript", "TypeScript", "C++", "SQL"],
+      items: ["Python", "JavaScript", "C++", "SQL"],
     },
     {
       title: "Frontend",
@@ -92,7 +92,7 @@ export const portfolioContent = {
     },
     {
       title: "Databases",
-      items: ["PostgreSQL", "Firebase Firestore", "MySQL", "Qdrant", "Redis"],
+      items: ["Firebase Firestore", "MySQL"],
     },
     {
       title: "AI & LLM",
