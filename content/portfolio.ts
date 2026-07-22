@@ -58,6 +58,24 @@ export const portfolioContent = {
       tags: ["Leadership", "Community", "Web Dev", "Cloud", "AI"],
     },
     {
+  title: "Full Stack Web Development Intern",
+  company: "ElevanceSkills",
+  meta: ["Jan 2026 - Jun 2026", "Remote · Bengaluru, Karnataka, India"],
+  description:
+    "Completed a Full Stack Web Development Internship focused on building scalable web applications. Developed responsive user interfaces using React.js, HTML, CSS, and JavaScript, while building RESTful APIs with Node.js and Express.js. Collaborated using Git and GitHub, optimized application performance, fixed bugs, and followed modern software development practices across frontend and backend development.",
+  icon: "/assets/icons/elevanceskills.svg",
+  tone: "work",
+  tags: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "JavaScript",
+    "REST APIs",
+    "Git",
+    "Full Stack"
+  ],
+},
+    {
       title: "Web Developer Intern",
       company: "Internship Studio",
       meta: ["May 28, 2024 – July 2, 2024", "Remote"],
@@ -196,6 +214,36 @@ export const portfolioContent = {
       tags: ["React.js", "Node.js", "Express.js", "MySQL", "RAG", "Vector Search", "LLMs", "Legal Tech"],
       defaultOpen: true,
     },
+    {
+  name: "Intern Area",
+  href: "https://github.com/nitesh-20/Internshala",
+  liveLink: "https://internarea-n0a94uyh3-ns0893222-8329s-projects.vercel.app/",
+  kind: "Internship Management Platform · React.js + Node.js + Express.js + MongoDB",
+  summary: "Built a full-stack internship management platform with authentication, internship listings, and application workflows.",
+  description:
+    "Intern Area is a full-stack web application developed as part of the Internshala Web Development program. The project was completed through six progressive development tasks covering frontend development, backend APIs, authentication, database integration, CRUD operations, and deployment. It provides a modern internship portal where users can browse opportunities, manage applications, and interact with a secure, responsive platform.",
+  icon: "/assets/icons/internshala.svg",
+  built: [
+    "Built responsive frontend interfaces using React.js and modern UI components.",
+    "Developed RESTful APIs with Node.js and Express.js for backend functionality.",
+    "Implemented secure user authentication and authorization.",
+    "Integrated MongoDB for storing users, internships, and application data.",
+    "Built complete CRUD operations for internship and application management.",
+    "Deployed the full-stack application with GitHub-based version control and Vercel hosting."
+  ],
+  challenge: [],
+  tags: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT",
+    "REST API",
+    "Full Stack",
+    "Vercel"
+  ],
+  defaultOpen: false,
+},
     {
       name: "Vaani.AI",
       href: "https://github.com/nitesh-20/Vaani-Ai-for-Paytm",
