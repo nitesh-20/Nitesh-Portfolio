@@ -197,8 +197,8 @@ export const portfolioContent = {
     },
     {
       name: "LawGPT",
-      href: "https://github.com/nitesh-20/LawGptGoogle",
-      liveLink: "https://law-gpt-1c925.firebaseapp.com/",
+      href: "https://github.com/nitesh-20/lawgpt-ai-os",
+      liveLink: "https://lawgpt-os.vercel.app/",
       kind: "AI Legal Assistant · React.js + Node.js + Express.js + MySQL",
       summary: "Developed an AI-powered legal document analysis and question-answering platform.",
       description:
