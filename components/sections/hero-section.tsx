@@ -9,9 +9,8 @@ export function HeroSection({ profile }: { profile: PortfolioContent["profile"] 
           <img src={profile.cityImage} alt="Grayscale city skyline" />
           <div className="hero-scan" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="hero-tag">AI products · workflow tools · developer systems</p>
+            <p className="hero-tag">PRODUCTION LLM INFRASTRUCTURE · REAL-TIME VOICE AI · MULTI-AGENT WORKFLOWS</p>
             <h1>{profile.headline}</h1>
-            <p>{profile.summary}</p>
           </div>
         </div>
       </section>
@@ -22,7 +21,14 @@ export function HeroSection({ profile }: { profile: PortfolioContent["profile"] 
             <img src={profile.portraitImage} alt={`${profile.name} portrait`} />
           </div>
           <div className="profile-copy">
-            <p className="eyebrow">{profile.eyebrow}</p>
+            <div className="profile-header-meta">
+              <span className="eyebrow-text">{profile.eyebrow}</span>
+              <div className="hero-location-badge">
+                <span className="dot pulse" />
+                <span>📍 {profile.location}</span>
+              </div>
+            </div>
+
             <div className="name-row">
               <h2>{profile.name}.</h2>
               <span className="verified" aria-label="Verified">
@@ -30,7 +36,10 @@ export function HeroSection({ profile }: { profile: PortfolioContent["profile"] 
               </span>
               <VoiceIntroButton message={profile.voiceIntro} />
             </div>
+
             <p className="role-line">{profile.role}</p>
+
+            <p className="profile-summary">{profile.summary}</p>
           </div>
         </div>
       </section>
