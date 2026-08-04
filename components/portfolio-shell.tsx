@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { AboutSection } from "@/components/sections/about-section";
 import { AchievementsSection } from "@/components/sections/achievements-section";
+import { EducationSection } from "@/components/sections/education-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { GitHubActivitySection } from "@/components/sections/github-activity-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -37,9 +38,15 @@ export function PortfolioShell() {
             </nav>
             <div className="toolbar">
               <CommandPalette links={portfolioContent.quickActions} copyActions={portfolioContent.copyActions} />
-              <a className="pill-button" href={portfolioContent.profile.supportUrl} target="_blank" rel="noreferrer">
-                <span aria-hidden="true">☕</span>
-                <span>buy me a coffee</span>
+              <a
+                className="pill-button resume-pill"
+                href={portfolioContent.profile.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                title="Download Resume"
+              >
+                <span aria-hidden="true">📄</span>
+                <span>Resume</span>
               </a>
               <a
                 className="icon-button"
@@ -62,16 +69,31 @@ export function PortfolioShell() {
           <Divider />
           <ExperienceSection experience={portfolioContent.experience} />
           <Divider />
-          <GitHubActivitySection />
+          <ProjectsSection projects={portfolioContent.projects} />
+          <Divider />
+          <AchievementsSection achievements={portfolioContent.achievements} />
+          <Divider />
+          <StackSection stackGroups={portfolioContent.stackGroups} />
+          <Divider />
+          <EducationSection education={portfolioContent.education} />
           <Divider />
           <AboutSection about={portfolioContent.about} />
           <Divider />
-          <StackSection stackGroups={portfolioContent.stackGroups} />
-          <AchievementsSection achievements={portfolioContent.achievements} />
-          <ProjectsSection projects={portfolioContent.projects} />
+          <GitHubActivitySection />
           <footer className="footer full-row">
             <div className="rail footer-rail">
-              <p>NITESH SAHU</p>
+              <div className="footer-left">
+                <p className="footer-name">NITESH SAHU</p>
+                <p className="footer-sub">AI Systems & Full-Stack Engineer · {portfolioContent.profile.location}</p>
+              </div>
+              <div className="footer-right">
+                <a href={`mailto:${portfolioContent.profile.email}`} className="footer-link">
+                  {portfolioContent.profile.email}
+                </a>
+                <a href={portfolioContent.profile.resumeUrl} target="_blank" rel="noreferrer" className="footer-link">
+                  Download Resume PDF ↗
+                </a>
+              </div>
             </div>
           </footer>
         </main>
