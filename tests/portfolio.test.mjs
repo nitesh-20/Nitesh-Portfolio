@@ -16,9 +16,10 @@ assert(shell.includes("CommandPalette"), "portfolio shell should include the com
 assert(content.includes("SSIPMT Raipur"), "content should include SSIPMT Raipur experience");
 assert(content.includes("GDG Lead"), "content should include GDG Lead experience");
 assert(content.includes("LawGPT"), "content should include LawGPT project");
-assert(content.includes("Vaani.AI"), "content should include Vaani.AI project");
-assert(content.includes("Agrisahayak"), "content should include Agrisahayak project");
-assert(content.includes("Google Build Blog Marathon 2025"), "content should include Google Build Blog Marathon achievement");
+assert(content.includes("Vaani AI"), "content should include Vaani AI project");
+assert(content.includes("Finance Copilot"), "content should include Finance Copilot project");
+assert(content.includes("RIO"), "content should include RIO project");
+assert(content.includes("Google Build & Blog Marathon 2025"), "content should include Google Build & Blog Marathon achievement");
 assert(route.includes("fetchGitHubSnapshot"), "GitHub API route should use the shared snapshot helper");
 assert(githubLib.includes("https://api.github.com/users/nitesh-20"), "GitHub lib should fetch the public profile");
 assert(githubLib.includes("https://api.github.com/graphql"), "GitHub lib should support the GraphQL contribution calendar");
