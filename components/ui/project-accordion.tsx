@@ -12,7 +12,7 @@ type ProjectAccordionProps = {
     description: string;
     icon: string;
     built: readonly string[];
-    challenge: readonly string[];
+    challenge?: readonly string[];
     tags: readonly string[];
     defaultOpen: boolean;
   };
@@ -46,13 +46,23 @@ export function ProjectAccordion({ project, index: _index }: ProjectAccordionPro
           <p className="project-desc">{project.description}</p>
           <div className="project-detail-cols">
             <div className="project-detail-col">
-              <h4 className="detail-label">Built</h4>
+              <h4 className="detail-label">Key Highlights & Architecture</h4>
               <ul className="detail-list">
                 {project.built.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
+            {project.challenge && project.challenge.length > 0 && (
+              <div className="project-detail-col">
+                <h4 className="detail-label">Technical Challenges Solved</h4>
+                <ul className="detail-list">
+                  {project.challenge.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -63,26 +73,28 @@ export function ProjectAccordion({ project, index: _index }: ProjectAccordionPro
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div className="project-action-buttons">
           {project.liveLink && (
             <a
               href={project.liveLink}
               target="_blank"
               rel="noreferrer"
               aria-label={`${project.name} Live Demo`}
-              className="project-gh"
+              className="project-action-btn primary"
             >
-              Live Demo ↗
+              <span>Live Demo</span>
+              <span aria-hidden="true">↗</span>
             </a>
           )}
           <a
             href={project.href}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${project.name} on GitHub`}
-            className="project-gh"
+            aria-label={`${project.name} Source Code on GitHub`}
+            className="project-action-btn secondary"
           >
-            GitHub ↗
+            <span>GitHub / Source Code</span>
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </footer>
