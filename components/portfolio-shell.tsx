@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { AboutSection } from "@/components/sections/about-section";
 import { AchievementsSection } from "@/components/sections/achievements-section";
@@ -21,6 +24,8 @@ function Divider() {
 }
 
 export function PortfolioShell() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <ThemeProvider>
       <div className="site-shell">
@@ -49,7 +54,7 @@ export function PortfolioShell() {
                 <span>Resume</span>
               </a>
               <a
-                className="icon-button"
+                className="icon-button header-github-btn"
                 href={portfolioContent.profile.githubUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -58,8 +63,35 @@ export function PortfolioShell() {
                 <img src="/assets/icons/github.svg" alt="" aria-hidden="true" />
               </a>
               <ThemeToggle />
+              <button
+                type="button"
+                className="icon-button mobile-menu-toggle"
+                onClick={() => setMobileMenuOpen((open) => !open)}
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileMenuOpen}
+              >
+                <span aria-hidden="true" style={{ fontSize: "18px", fontWeight: "bold", lineHeight: 1 }}>
+                  {mobileMenuOpen ? "✕" : "☰"}
+                </span>
+              </button>
             </div>
           </div>
+          {mobileMenuOpen && (
+            <nav className="mobile-nav-panel rail" aria-label="Mobile navigation">
+              <div className="mobile-nav-links">
+                {portfolioContent.navigation.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="mobile-nav-link"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          )}
         </header>
 
         <main>
@@ -101,3 +133,4 @@ export function PortfolioShell() {
     </ThemeProvider>
   );
 }
+

@@ -13,7 +13,7 @@ export const portfolioContent = {
     supportUrl: "mailto:iamniteshsahu20@gmail.com",
     githubUrl: "https://github.com/nitesh-20",
     linkedinUrl: "https://www.linkedin.com/in/niteshsahu20/",
-    resumeUrl: "/Nitesh07.pdf",
+    resumeUrl: "/Nitesh.pdf",
     cityImage: "/assets/city.jpg",
     portraitImage: "/assets/profile.jpeg",
     voiceIntro:
@@ -118,7 +118,7 @@ export const portfolioContent = {
   stackGroups: [
     {
       title: "Languages",
-      items: ["Python", "TypeScript", "JavaScript", "C++", "SQL"],
+      items: ["Python", "TypeScript", "JavaScript", "C++", "Java (Basic)", "SQL"],
     },
     {
       title: "AI & LLM Systems",
@@ -215,6 +215,27 @@ export const portfolioContent = {
       ],
       tags: ["React", "FastAPI", "Python", "Firebase", "RAG", "Qdrant", "Google Gemini", "PDF Processing"],
       defaultOpen: true,
+    },
+    {
+      name: "HirePilot AI",
+      href: "https://github.com/nitesh-20/Hire-AI",
+      kind: "AI Job Intelligence & Career Automation · Python + Gemini + PyYAML + ATS Ingestion",
+      summary: "AI-powered job intelligence system discovering engineering roles, pre-filtering deterministically, & evaluating candidate fit using LLMs.",
+      description:
+        "HirePilot AI is an AI-powered job intelligence and career automation system built to reduce noise in job searching. It discovers opportunities across supported job platforms (Greenhouse, Lever, Ashby), applies zero-token deterministic filters for role, location, freshness, and experience, and evaluates candidate-job fit using LLMs to deliver focused daily HTML digests.",
+      icon: "/assets/icons/hirepilot.svg",
+      built: [
+        "Built a multi-source job discovery pipeline ingesting public ATS job boards across Greenhouse, Lever, and Ashby APIs.",
+        "Reduced thousands of raw postings to a candidate set using zero-token deterministic regex pre-filtering (title, location, max-age) before LLM inference.",
+        "Engineered LLM-based candidate-job fit scoring with candidate profile parsing and early-career experience level constraints.",
+        "Automated personalized HTML job digest generation and SMTP email delivery with local state deduplication tracking (seen.json).",
+      ],
+      challenge: [
+        "Dropping ~99% of non-matching postings via metadata gates to minimize LLM token costs and throughput latency.",
+        "Handling stateful deduplication across multiple ATS platforms to guarantee zero repeated job reviews.",
+      ],
+      tags: ["Python", "Google Gemini", "PyYAML", "Greenhouse", "Lever", "Ashby", "LLM Screening", "Job Automation"],
+      defaultOpen: false,
     },
     {
       name: "Vaani AI",

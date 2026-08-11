@@ -57,6 +57,8 @@ html[data-theme="light"] {
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html[data-theme="light"] {
@@ -66,6 +68,7 @@ html[data-theme="light"] {
 body {
   margin: 0;
   min-width: 320px;
+  max-width: 100%;
   overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
@@ -90,6 +93,9 @@ img {
 .site-shell {
   position: relative;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background:
     repeating-linear-gradient(
       90deg,
@@ -104,12 +110,15 @@ img {
 
 .full-row {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding-inline: 16px;
 }
 
 .rail {
   width: 100%;
   max-width: var(--rail-max);
+  box-sizing: border-box;
   margin-inline: auto;
   border-inline: 1px solid var(--border);
 }
@@ -121,30 +130,32 @@ section[id] {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(14px);
+  width: 100%;
 }
 
 .topbar .rail {
   min-height: 70px;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding: 0 18px;
   border-bottom: 1px solid var(--border);
 }
 
 .brand {
   align-self: center;
-  justify-self: start;
   font-family: "Courier New", ui-monospace, monospace;
-  font-size: 62px;
+  font-size: 52px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.08em;
   color: var(--text);
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .desktop-nav {
@@ -160,6 +171,7 @@ section[id] {
   letter-spacing: 0.05em;
   color: var(--muted);
   transition: color 160ms ease;
+  white-space: nowrap;
 }
 
 .desktop-nav a:hover {
@@ -171,6 +183,60 @@ section[id] {
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-nav-panel {
+  display: flex;
+  flex-direction: column;
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  animation: slideDownNav 180ms ease-out forwards;
+}
+
+@keyframes slideDownNav {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-nav-link {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 12px 14px;
+  border-radius: 8px;
+  transition: all 160ms ease;
+  border-bottom: 1px dashed var(--border);
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--text);
+  background: var(--surface-tint);
 }
 
 .icon-button,
@@ -1579,10 +1645,26 @@ html:not([data-theme]) .social-mark img {
     max-width: 100%;
   }
 
-  .topbar .rail,
   .profile-grid,
   .github-chart-layout {
     grid-template-columns: 1fr;
+  }
+
+  .topbar .rail {
+    min-height: 60px;
+    padding: 0 14px;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex !important;
+  }
+
+  .brand {
+    font-size: 38px;
   }
 
   .experience-trigger {
@@ -1676,11 +1758,20 @@ html:not([data-theme]) .social-mark img {
 
   .topbar .rail {
     padding-inline: 12px;
+    min-height: 56px;
+  }
+
+  .brand {
+    font-size: 32px;
   }
 
   .toolbar {
     gap: 6px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+
+  .header-github-btn {
+    display: none;
   }
 
   .pill-button span:last-child {
