@@ -23,10 +23,7 @@ export const portfolioContent = {
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Achievements", href: "#achievements" },
-    { label: "Tech Stack", href: "#stack" },
-    { label: "Education", href: "#education" },
     { label: "About", href: "#about" },
-    { label: "GitHub", href: "#github-sync" },
   ],
   socialLinks: [
     {
