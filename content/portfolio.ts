@@ -2,7 +2,7 @@ export const portfolioContent = {
   profile: {
     initials: "NS",
     name: "Nitesh Sahu",
-    location: "Bengaluru, Karnataka",
+    location: "Raipur, Chhattisgarh",
     phone: "+91 9755175246",
     email: "iamniteshsahu20@gmail.com",
     eyebrow: "AI Systems & Full-Stack Engineer",
